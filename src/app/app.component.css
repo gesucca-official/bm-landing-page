@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Electrolize:300,400,500");
+
+.toolbar {
+  font: 500 20px/32px Electrolize;
+}
+
+.title-container {
+  margin-top: 15vh;
+}
+
+.title {
+  font: 550 72px Electrolize;
+  color: #a9a9a9;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 10vh;
+  font: 350 24px Electrolize;
+  color: #575757;
+  text-align: center;
+}

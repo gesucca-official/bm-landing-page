@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bm-landing-page';
+
+  constructor(private snackBar: MatSnackBar) {}
+
+  @HostListener('document:click', ['$event'])
+  documentClick(): void {
+    this.snackBar.open('Starting app, please be patient...', 'Ok', {
+      duration: 5000
+    });
+    window.document.location.href = 'https://botte-micidiali.herokuapp.com';
+  }
 }
